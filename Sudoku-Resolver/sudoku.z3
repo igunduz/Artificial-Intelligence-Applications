@@ -48,7 +48,7 @@
 
 ;;;;;; --- BEGIN-CONSTRAINTS-2 --- 
 ; ** Constraints for top left 3 × 3 square **
-; TODO
+
 
 ;;;;;; --- END-CONSTRAINTS-2 ---
 

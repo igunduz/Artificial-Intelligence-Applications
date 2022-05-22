@@ -108,46 +108,55 @@
 
 ;;;;;; --- END-CONSTRAINTS-4 ---
 
-
-
 ;;;;;; --- BEGIN-CONSTRAINTS-5 --- 
 
-; ** Constraints for center left square **
 
-(assert (and (= (+ (Board x0 y3)(Board x1 y3) (Board x2 y3)) (+ (Board x0 y4) (Board x1 y4) (Board x2 y4)) ) (= (+ (Board x0 y4) (+ (Board x1 y4) (Board x2 y4))) (+ (Board x0 y5) (+ (Board x1 y5) (Board x2 y5))) )))
-
-
-;;;;;; --- END-CONSTRAINTS-5 ---
-
+;;;;;; --- END-CONSTRAINTS-5   ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-6 --- 
 
-; ** Constraints for center square **
-(assert (and (> (Board x3 y3) (Board x3 y4) ) (> (Board x3 y4) (Board x3 y5) ) ) )
-(assert (and (> (Board x4 y3) (Board x4 y4) ) (> (Board x4 y4) (Board x4 y5) ) ) )
-(assert (and (> (Board x5 y3) (Board x5 y4) ) (> (Board x5 y4) (Board x5 y5) ) ) )
+(assert
+	(and
+		(< (Board x3 y3) (Board x3 y4)) (< (Board x3 y4) (Board x3 y5))
+		(< (Board x4 y3) (Board x4 y4)) (< (Board x4 y4) (Board x4 y5))
+		(< (Board x5 y3) (Board x5 y4)) (< (Board x5 y4) (Board x5 y5))
+	)
+)
 
-;;;;;; --- END-CONSTRAINTS-6 ---
 
-
+;;;;;; --- END-CONSTRAINTS-6   ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-7 --- 
-
-; ** Constraints for bottom left square **
-(assert (= (mod (* (+ (Board x0 y6) (+ (Board x0 y7) (Board x0 y8) ) ) (+ (Board x2 y6) (+ (Board x2 y7) (Board x2 y8) ) ) ) 2) 1)) 
+(assert 
+	(and
+		(or
+	    	(= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 23)
+	    	(= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 21)
+	    	(= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 19)
+	    	(= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 17)
+	    	(= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 15)
+	        (= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 13)
+		(= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 11)
+		(= (+ (Board x0 y6) (Board x0 y7) (Board x0 y8)) 9)
+	    )
+	    (or
+	        (= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 23)
+	        (= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 21)
+	        (= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 19)
+	        (= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 17)
+	        (= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 15)
+	        (= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 13)
+		(= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 11)
+		(= (+ (Board x2 y6) (Board x2 y7) (Board x2 y8)) 9)
+	    )
+	)
+)
 
 ;;;;;; --- END-CONSTRAINTS-7 ---
 
-
-
 ;;;;;; --- BEGIN-CONSTRAINTS-8 --- 
 
-; ** Constraints for bottom middle square **
-(assert (= (* (Board x4 y7) 3) (+ (Board x4 y7) (+ (Board x3 y7) (+ (Board x4 y8) (Board x5 y7))))))
-
 ;;;;;; --- END-CONSTRAINTS-8 ---
-
-
 
 ;;;;;; --- BEGIN-CONSTRAINTS-9 --- 
 
@@ -162,8 +171,6 @@
 
 
 ;;;;;; --- END-CONSTRAINTS-9 ---
-
-
 
 ;;;;;; --- BEGIN-CONSTRAINTS-DOMAIN ---
 
@@ -344,4 +351,3 @@
 (get-value ((Board x6 y8)))
 (get-value ((Board x7 y8)))
 (get-value ((Board x8 y8)))
-

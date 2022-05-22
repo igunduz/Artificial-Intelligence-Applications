@@ -53,7 +53,7 @@
 
 ;;;;;;;; Assigning given values
 
-(assert (and (= (Board x0 y2) 6) (= (Board x0 y2) 2) (= (Board x1 y2) 9) (= (Board x7 y1) 3) (= (Board x1 y3) 4) (= (Board x1 y4) 3) (= (Board x1 y5) 6)
+(assert (and (= (Board x2 y0) 6) (= (Board x0 y2) 2) (= (Board x1 y2) 9) (= (Board x7 y1) 3) (= (Board x1 y3) 4) (= (Board x1 y4) 3) (= (Board x1 y5) 6)
 	(= (Board x4 y5) 7) (= (Board x6 y3) 7) (= (Board x7 y3) 8) (= (Board x8 y4) 1) (= (Board x7 y5) 4) (= (Board x1 y6) 7) (= (Board x3 y8) 3 )
 )
 )

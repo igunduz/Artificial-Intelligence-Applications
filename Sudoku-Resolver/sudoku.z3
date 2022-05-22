@@ -70,35 +70,41 @@
 ;;;;;; --- END-CONSTRAINTS-1 ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-2 --- 
-; ** Constraints for top left 3 × 3 square **
+; ** Constraints for top left 3 ??? 3 square **
 
-(assert (= (+ (Board x0 y0) (Board x1 y0)) 8))
-(assert (= (- (Board x0 y1) (Board x1 y1)) 6))
-(assert (= (/ (Board x2 y0) (Board x2 y1)) 2))
+(assert
+       (and 
+		(= 8 (+ (Board x0 y0) (Board x1 y0)))
+         (= 6 (- (Board x0 y1) (Board x1 y1)))
+		
+		(= (Board x2 y2) (* 2 (Board x2 y1)))
+	)
+)
 
 
 ;;;;;; --- END-CONSTRAINTS-2 ---
 
-
-
 ;;;;;; --- BEGIN-CONSTRAINTS-3 --- 
 
-; ** Constraints for top middle 3 × 3 square **
+; ** Constraints for top middle 3 ??? 3 square **
 
 (assert (or (and (= (mod (Board x3 y0) 2) 0) (= (mod (Board x5 y0) 2 ) 0) (= (mod (Board x3 y2) 2 ) 0) (= (mod (Board x5 y2) 2) 0) (= (mod (Board x4 y1) 2) 1) ) (and (= (mod (Board x3 y0) 2) 1) (= (mod (Board x5 y0) 2) 1) (= (mod (Board x3 y2) 2) 1) (= (mod (Board x5 y2) 2) 1) (= (mod (Board x4 y1) 2) 0) ) )   )
 
 ;;;;;; --- END-CONSTRAINTS-3 ---
 
 
-
 ;;;;;; --- BEGIN-CONSTRAINTS-4 --- 
 
 ; ** Constraints for top right square **
 
-(assert (or (= (Board x6 y1) (+ (Board x6 y0) 1)) (= (Board x7 y0) (+ (Board x6 y0) 1))))
-(assert (or (= (Board x6 y1) (+ (Board x6 y2) 1)) (= (Board x7 y2) (+ (Board x6 y2) 1))))
-(assert (or (= (Board x7 y2) (+ (Board x8 y2) 1)) (= (Board x8 y1) (+ (Board x8 y2) 1))))
-(assert (or (= (Board x7 y0) (+ (Board x8 y0) 1)) (= (Board x8 y1) (+ (Board x8 y0) 1))))
+(assert 
+	(and
+	       (or (= (+ (Board x6 y0) 1) (Board x7 y0))  (= (+ (Board x6 y0) 1) (Board x6 y1)))
+               (or (= (+ (Board x8 y0) 1) (Board x7 y0))  (= (+ (Board x8 y0) 1) (Board x8 y2)))
+		(or (= (+ (Board x6 y2) 1) (Board x6 y1))  (= (+ (Board x6 y2) 1) (Board x7 y2)))
+	    (or (= (+ (Board x8 y2) 1) (Board x7 y2))  (= (+ (Board x8 y2) 1) (Board x8 y1)))
+	)
+)
 
 ;;;;;; --- END-CONSTRAINTS-4 ---
 

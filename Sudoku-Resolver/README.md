@@ -32,12 +32,13 @@ example the cell <0,3> = 3, then either <0,4> = 4 or <1,3> = 4.
    - (c) {5,3} < {5,4} < {5,5}
    
 7. Bottom left 3 × 3 square: Multiplying the sums of the two indicated columns
-gives an odd number: (<0, 6> + <0, 7> + <0, 8>) × (<2, 6> + <2, 7> + <2, 8>)
-must be odd.
+gives an odd number: 
+(<0, 6> + <0, 7> + <0, 8>) × (<2, 6> + <2, 7> + <2, 8>) must be odd.
 
 8. Bottom middle 3 × 3 square: The sum of the indicated cells must be equal to three
-times the value of the center cell. 
-In other words: <4, 6> + <3, 7> + <4, 8> + <5, 7> = 3 × <4, 7>
+times the value of the center cell. In other words: 
+
+<4, 6> + <3, 7> + <4, 8> + <5, 7> = 3 × <4, 7>
 
 9. Bottom right 3 × 3 square: at most one of the yellow cells may contain a value larger
 than 4.

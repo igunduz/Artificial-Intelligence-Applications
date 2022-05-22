@@ -7,7 +7,7 @@
 ; Fill in the missing constraints into the designated sections
 
 
-;;;;;; --- BEGIN-CONSTRAINTS-1a --- 
+;;;;;; --- BEGIN-CONSTRAINTS-1 --- 
 
 (assert (distinct (Board x0 y0) (Board x0 y1) (Board x0 y2) (Board x0 y3) (Board x0 y4) (Board x0 y5) (Board x0 y6) (Board x0 y7) (Board x0 y8) ))
 (assert (distinct (Board x1 y0) (Board x1 y1) (Board x1 y2) (Board x1 y3) (Board x1 y4) (Board x1 y5) (Board x1 y6) (Board x1 y7) (Board x1 y8) ))
@@ -39,20 +39,16 @@
 (assert (distinct (Board x6 y3) (Board x6 y4) (Board x6 y5) (Board x7 y3) (Board x7 y4) (Board x7 y5) (Board x8 y3) (Board x8 y4) (Board x8 y5) ))
 (assert (distinct (Board x6 y6) (Board x6 y7) (Board x6 y8) (Board x7 y6) (Board x7 y7) (Board x7 y8) (Board x8 y6) (Board x8 y7) (Board x8 y8) ))
 
-;;;;;; --- END-CONSTRAINTS-1a ---
-
-;;;;;; --- BEGIN-CONSTRAINTS-1b --- 
-
 (assert (= (Board x0 y0) 6))
 (assert (= (Board x2 y1) 9))
 (assert (= (Board x2 y2) 4))
 (assert (= (Board x0 y2) 2))
 
-;;;;;; --- END-CONSTRAINTS-1b ---
+;;;;;; --- END-CONSTRAINTS-1 ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-2 --- 
-
-(assert (or (and (= (mod (Board x6 y6) 2) 0) (= (mod (Board x8 y6) 2 ) 0) (= (mod (Board x6 y8) 2 ) 0) (= (mod (Board x8 y8) 2) 0) (= (mod (Board x7 y7) 2) 1) ) (and (= (mod (Board x6 y6) 2) 1) (= (mod (Board x8 y6) 2) 1) (= (mod (Board x6 y8) 2) 1) (= (mod (Board x8 y8) 2) 1) (= (mod (Board x7 y7) 2) 0) ) )   )
+; ** Constraints for top left 3 × 3 square **
+; TODO
 
 ;;;;;; --- END-CONSTRAINTS-2 ---
 
@@ -60,8 +56,9 @@
 
 ;;;;;; --- BEGIN-CONSTRAINTS-3 --- 
 
-; ** Constraints for top middle square **
-; TODO 
+; ** Constraints for top middle 3 × 3 square **
+
+(assert (or (and (= (mod (Board x6 y6) 2) 0) (= (mod (Board x8 y6) 2 ) 0) (= (mod (Board x6 y8) 2 ) 0) (= (mod (Board x8 y8) 2) 0) (= (mod (Board x7 y7) 2) 1) ) (and (= (mod (Board x6 y6) 2) 1) (= (mod (Board x8 y6) 2) 1) (= (mod (Board x6 y8) 2) 1) (= (mod (Board x8 y8) 2) 1) (= (mod (Board x7 y7) 2) 0) ) )   )
 
 ;;;;;; --- END-CONSTRAINTS-3 ---
 

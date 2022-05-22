@@ -43,8 +43,10 @@
 
 ;;;;;; --- BEGIN-CONSTRAINTS-1b --- 
 
-; ** Sudoku constraints **
-; TODO
+(assert (= (Board x0 y0) 6))
+(assert (= (Board x2 y1) 9))
+(assert (= (Board x2 y2) 4))
+(assert (= (Board x0 y2) 2))
 
 ;;;;;; --- END-CONSTRAINTS-1b ---
 

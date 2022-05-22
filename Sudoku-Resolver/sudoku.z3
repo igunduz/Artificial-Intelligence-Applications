@@ -128,7 +128,7 @@
 ;;;;;; --- BEGIN-CONSTRAINTS-7 --- 
 
 ; ** Constraints for bottom left square **
-; TODO 
+(assert (= (mod (* (+ (Board x0 y6) (+ (Board x0 y7) (Board x0 y8) ) ) (+ (Board x2 y6) (+ (Board x2 y7) (Board x2 y8) ) ) ) 2) 1)) 
 
 ;;;;;; --- END-CONSTRAINTS-7 ---
 

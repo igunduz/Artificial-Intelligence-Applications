@@ -72,14 +72,7 @@
 ;;;;;; --- BEGIN-CONSTRAINTS-2 --- 
 ; ** Constraints for top left 3 ??? 3 square **
 
-(assert
-       (and 
-		(= 8 (+ (Board x0 y0) (Board x1 y0)))
-         (= 6 (- (Board x0 y1) (Board x1 y1)))
-		
-		(= (Board x2 y2) (* 2 (Board x2 y1)))
-	)
-)
+(assert(and (= 8 (+ (Board x0 y0) (Board x1 y0)))(= 6 (- (Board x0 y1) (Board x1 y1)))(= (Board x2 y2) (* 2 (Board x2 y1)))))
 
 
 ;;;;;; --- END-CONSTRAINTS-2 ---
@@ -155,6 +148,8 @@
 ;;;;;; --- END-CONSTRAINTS-7 ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-8 --- 
+
+<4, 6> + <3, 7> + <4, 8> + <5, 7> = 3 × <4, 7>
 
 ;;;;;; --- END-CONSTRAINTS-8 ---
 

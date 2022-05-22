@@ -147,6 +147,11 @@
 
 ; ** Constraints for bottom right square **
 
+;(assert (and (< (Board x6 y6) 4) (> (Board x8 y8) 4) (> (Board x8 y6) 4) (> (Board x7 y8) 4) ))
+;(assert (and (< (Board x8 y8) 4) (> (Board x8 y6) 4) (> (Board x7 y8) 4) (> (Board x6 y6) 4) ))
+;(assert (and (< (Board x8 y6) 4) (> (Board x7 y8) 4) (> (Board x6 y6) 4) (> (Board x8 y8) 4) ))
+;(assert (and (< (Board x7 y8) 4) (> (Board x6 y6) 4) (> (Board x8 y8) 4) (> (Board x8 y6) 4) ))
+
 (assert (or (and (< (Board x6 y6) 4) (> (Board x8 y8) 4) (> (Board x8 y6) 4) (> (Board x7 y8) 4)) (and (< (Board x8 y8) 4) (> (Board x8 y6) 4) (> (Board x7 y8) 4) (> (Board x6 y6) 4)) (and (< (Board x8 y6) 4) (> (Board x7 y8) 4) (> (Board X6 y6) 4) (> (Board x8 y8) 4)) (and (< (Board x7 y8) 4) (> (Board x6 y6) 4) (> (Board x8 y8) 4) (> (Board x8 y6) 4)) ) )
 
 

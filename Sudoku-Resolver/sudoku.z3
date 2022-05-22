@@ -66,10 +66,15 @@
 
 ; bottom middle 3x3
 (assert (= (Board x3 y8) 3))
+
 ;;;;;; --- END-CONSTRAINTS-1 ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-2 --- 
 ; ** Constraints for top left 3 × 3 square **
+
+(assert (= (+ (Board x0 y0) (Board x1 y0)) 8))
+(assert (= (- (Board x0 y1) (Board x1 y1)) 6))
+(assert (= (/ (Board x2 y0) (Board x2 y1)) 2))
 
 
 ;;;;;; --- END-CONSTRAINTS-2 ---

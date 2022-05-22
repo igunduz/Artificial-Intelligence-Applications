@@ -85,6 +85,7 @@
 
 ; ** Constraints for top middle 3 × 3 square **
 
+(assert (or (and (= (mod (Board x3 y0) 2) 0) (= (mod (Board x5 y0) 2 ) 0) (= (mod (Board x3 y2) 2 ) 0) (= (mod (Board x5 y2) 2) 0) (= (mod (Board x4 y1) 2) 1) ) (and (= (mod (Board x3 y0) 2) 1) (= (mod (Board x5 y0) 2) 1) (= (mod (Board x3 y2) 2) 1) (= (mod (Board x5 y2) 2) 1) (= (mod (Board x4 y1) 2) 0) ) )   )
 
 ;;;;;; --- END-CONSTRAINTS-3 ---
 

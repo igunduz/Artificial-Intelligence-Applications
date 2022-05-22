@@ -108,10 +108,10 @@
 
 ; ** Constraints for center left square **
 
-(assert (and (= (+ (Board x0 y3) (+ (Board x1 y3) (Board x2 y3))) (+ (Board x0 y4) (+ (Board x1 y4) (Board x2 y4))) ) (= (+ (Board x0 y4) (+ (Board x1 y4) (Board x2 y4))) (+ (Board x0 y5) (+ (Board x1 y5) (Board x2 y5))) )))
+(assert (and (= (+ (Board x0 y3)(Board x1 y3) (Board x2 y3)) (+ (Board x0 y4) (Board x1 y4) (Board x2 y4)) ) (= (+ (Board x0 y4) (+ (Board x1 y4) (Board x2 y4))) (+ (Board x0 y5) (+ (Board x1 y5) (Board x2 y5))) )))
+
 
 ;;;;;; --- END-CONSTRAINTS-5 ---
-
 
 
 ;;;;;; --- BEGIN-CONSTRAINTS-6 --- 

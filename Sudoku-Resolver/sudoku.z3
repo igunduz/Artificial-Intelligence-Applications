@@ -52,7 +52,7 @@
 (assert (= (Board x1 y4) 3))
 (assert (= (Board x1 y5) 6))
 
-; middle middle 3x3
+; middle center 3x3
 (assert (= (Board x4 y5) 7))
 
 ; middle right 3x3
@@ -117,7 +117,9 @@
 ;;;;;; --- BEGIN-CONSTRAINTS-6 --- 
 
 ; ** Constraints for center square **
-; TODO 
+(assert (and (> (Board x3 y3) (Board x3 y4) ) (> (Board x3 y4) (Board x3 y5) ) ) )
+(assert (and (> (Board x4 y3) (Board x4 y4) ) (> (Board x4 y4) (Board x4 y5) ) ) )
+(assert (and (> (Board x5 y3) (Board x5 y4) ) (> (Board x5 y4) (Board x5 y5) ) ) )
 
 ;;;;;; --- END-CONSTRAINTS-6 ---
 

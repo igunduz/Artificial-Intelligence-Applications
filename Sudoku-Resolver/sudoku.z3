@@ -94,7 +94,11 @@
 ;;;;;; --- BEGIN-CONSTRAINTS-4 --- 
 
 ; ** Constraints for top right square **
-; TODO 
+
+(assert (or (= (Board x6 y1) (+ (Board x6 y0) 1)) (= (Board x7 y0) (+ (Board x6 y0) 1))))
+(assert (or (= (Board x6 y1) (+ (Board x6 y2) 1)) (= (Board x7 y2) (+ (Board x6 y2) 1))))
+(assert (or (= (Board x7 y2) (+ (Board x8 y2) 1)) (= (Board x8 y1) (+ (Board x8 y2) 1))))
+(assert (or (= (Board x7 y0) (+ (Board x8 y0) 1)) (= (Board x8 y1) (+ (Board x8 y0) 1))))
 
 ;;;;;; --- END-CONSTRAINTS-4 ---
 

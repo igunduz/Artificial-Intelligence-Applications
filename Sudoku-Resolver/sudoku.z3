@@ -137,7 +137,7 @@
 ;;;;;; --- BEGIN-CONSTRAINTS-8 --- 
 
 ; ** Constraints for bottom middle square **
-; TODO 
+(assert (= (* (Board x4 y7) 2) (+ (Board x4 y7) (+ (Board x3 y7) (+ (Board x4 y8) (Board x5 y7))))))
 
 ;;;;;; --- END-CONSTRAINTS-8 ---
 

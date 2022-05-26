@@ -81,7 +81,68 @@
 
 ; ** Constraints for top middle 3 ??? 3 square **
 
-(assert (or (and (= (mod (Board x3 y0) 2) 0) (= (mod (Board x5 y0) 2 ) 0) (= (mod (Board x3 y2) 2 ) 0) (= (mod (Board x5 y2) 2) 0) (= (mod (Board x4 y1) 2) 1) ) (and (= (mod (Board x3 y0) 2) 1) (= (mod (Board x5 y0) 2) 1) (= (mod (Board x3 y2) 2) 1) (= (mod (Board x5 y2) 2) 1) (= (mod (Board x4 y1) 2) 0) ) )   )
+(declare-const k Int)
+(assert
+
+(or
+(and
+(=
+(Board x3 y0)
+(* k 2)
+)
+(=
+(Board x5 y0)
+(* k 2)
+)
+(=
+(Board x3 y2)
+(* k 2)
+)
+(=
+(Board x5 y2)
+(* k 2)
+)
+(not
+(=
+(Board x4 y1)
+(* k 2)
+)
+)
+)
+
+(and
+(not
+(=
+(Board x3 y0)
+(* k 2)
+)
+)
+(not
+(=
+(Board x5 y0)
+(* k 2)
+)
+)
+(not
+(=
+(Board x3 y2)
+(* k 2)
+)
+)
+(not
+(=
+(Board x5 y2)
+(* k 2)
+)
+)
+(=
+(Board x4 y1)
+(* k 2)
+)
+)
+
+)
+)
 
 ;;;;;; --- END-CONSTRAINTS-3 ---
 
@@ -102,6 +163,7 @@
 ;;;;;; --- END-CONSTRAINTS-4 ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-5 --- 
+
 
 
 ;;;;;; --- END-CONSTRAINTS-5   ---
@@ -149,7 +211,11 @@
 
 ;;;;;; --- BEGIN-CONSTRAINTS-8 --- 
 
-<4, 6> + <3, 7> + <4, 8> + <5, 7> = 3 × <4, 7>
+(assert 
+(= 
+(+ (Board x4 y6) (Board x3 y7) (Board x4 y8) (Board x5 y7) ) 
+(* (Board x4 y7) 3 ) 
+))
 
 ;;;;;; --- END-CONSTRAINTS-8 ---
 

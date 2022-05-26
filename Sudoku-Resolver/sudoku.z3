@@ -40,7 +40,7 @@
 (assert (distinct (Board x6 y6) (Board x6 y7) (Board x6 y8) (Board x7 y6) (Board x7 y7) (Board x7 y8) (Board x8 y6) (Board x8 y7) (Board x8 y8) ))
 
 ; top left 3x3
-(assert (= (Board x0 y3) 2))
+(assert (= (Board x0 y2) 2))
 (assert (= (Board x1 y2) 9))
 (assert (= (Board x2 y0) 6))
 
@@ -57,7 +57,7 @@
 
 ; middle right 3x3
 (assert (= (Board x6 y3) 7))
-(assert (= (Board x7 y4) 8))
+(assert (= (Board x7 y3) 8))
 (assert (= (Board x7 y5) 4))
 (assert (= (Board x8 y4) 1))
 
@@ -149,7 +149,7 @@
 
 ;;;;;; --- BEGIN-CONSTRAINTS-8 --- 
 
-<4, 6> + <3, 7> + <4, 8> + <5, 7> = 3 × <4, 7>
+<4, 6> + <3, 7> + <4, 8> + <5, 7> = 3 Ã— <4, 7>
 
 ;;;;;; --- END-CONSTRAINTS-8 ---
 

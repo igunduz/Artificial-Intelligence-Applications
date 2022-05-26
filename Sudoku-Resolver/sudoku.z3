@@ -164,8 +164,15 @@
 
 ;;;;;; --- BEGIN-CONSTRAINTS-5 --- 
 
+;<0,3> + <1,3> + <2,3> = <0,4> + <1,4> + <2,4> = <0,5> + <1,5> + <2,5>.
 
 
+(assert 
+	(and
+	       (or (= (+ (Board x0 y3) (Board x1 y3)) (Board x2 y3))  (= (+ (Board x0 y4) (Board x1 y4)) (Board x2 y4)))
+               (or (= (+ (Board x0 y3) (Board x1 y3)) (Board x2 y3)) (= (+ (Board x0 y5) (Board x1 y5)) (Board x2 y5)))
+	)
+)
 ;;;;;; --- END-CONSTRAINTS-5   ---
 
 ;;;;;; --- BEGIN-CONSTRAINTS-6 --- 

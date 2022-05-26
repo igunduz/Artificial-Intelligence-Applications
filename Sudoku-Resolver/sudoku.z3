@@ -84,65 +84,7 @@
 (declare-const k Int)
 (assert
 
-(or
-(and
-(=
-(Board x3 y0)
-(* k 2)
-)
-(=
-(Board x5 y0)
-(* k 2)
-)
-(=
-(Board x3 y2)
-(* k 2)
-)
-(=
-(Board x5 y2)
-(* k 2)
-)
-(not
-(=
-(Board x4 y1)
-(* k 2)
-)
-)
-)
-
-(and
-(not
-(=
-(Board x3 y0)
-(* k 2)
-)
-)
-(not
-(=
-(Board x5 y0)
-(* k 2)
-)
-)
-(not
-(=
-(Board x3 y2)
-(* k 2)
-)
-)
-(not
-(=
-(Board x5 y2)
-(* k 2)
-)
-)
-(=
-(Board x4 y1)
-(* k 2)
-)
-)
-
-)
-)
+(or(and(=(Board x3 y0)(* k 2))(=(Board x5 y0)(* k 2))(=(Board x3 y2)(* k 2))(=(Board x5 y2)(* k 2))(not(=(Board x4 y1)(* k 2))))(and(not(=(Board x3 y0)(* k 2)))(not(=(Board x5 y0)(* k 2)))(not(=(Board x3 y2)(* k 2)))(not(=(Board x5 y2)(* k 2)))(=(Board x4 y1)(* k 2)))))
 
 ;;;;;; --- END-CONSTRAINTS-3 ---
 

@@ -2,3 +2,4 @@
 AI class practical sheet solutions.
 
 1. Sudoku resolver using *Z3*. **A constrain satisfaction problem.**
+2. Propositional logic solver using *Z3*.

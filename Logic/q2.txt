@@ -1,0 +1,15 @@
+sat
+Geogor order beer
+((G false))
+Natasha order beer
+((N false))
+Bob order beer
+((B false))
+Lise order beer
+((L false))
+Frank order beer
+((F false))
+Seifred order Wine
+((S true))
+Ivar order beer
+((I false))

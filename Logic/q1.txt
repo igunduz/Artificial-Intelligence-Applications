@@ -1,0 +1,50 @@
+q1a
+
+sat
+((conjecture true))
+
+------------
+
+q1b
+
+sat
+((conjecture true))
+(model 
+  (define-fun r () Bool
+    false)
+  (define-fun p () Bool
+    false)
+)
+
+-------------
+q1c
+
+sat
+((conjecture false))
+(model 
+  (define-fun p () Bool
+    false)
+  (define-fun r () Bool
+    false)
+  (define-fun q () Bool
+    false)
+)
+--------
+q1d
+
+
+sat
+((conjecture true))
+
+-------------
+
+
+q1e
+
+unsat
+
+
+
+
+
+
